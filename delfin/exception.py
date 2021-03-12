@@ -309,3 +309,8 @@ class StorageIsSyncing(Invalid):
 class InvalidIpOrPort(DelfinException):
     msg_fmt = _("Invalid ip or port.")
     code = 400
+
+
+class StorageDriverAlert(DelfinException):
+    msg_fmt = _("Storage driver alert '{0}'")
+    code = 400
