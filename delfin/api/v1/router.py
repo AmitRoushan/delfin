@@ -20,7 +20,6 @@ from delfin.api.v1 import alerts
 from delfin.api.v1 import controllers
 from delfin.api.v1 import disks
 from delfin.api.v1 import filesystems
-from delfin.api.v1 import performance
 from delfin.api.v1 import ports
 from delfin.api.v1 import qtrees
 from delfin.api.v1 import shares
@@ -45,12 +44,6 @@ class APIRouter(common.APIRouter):
                        controller=self.resources['storages'],
                        action="sync_all",
                        conditions={"method": ["POST"]})
-
-        self.resources['performance'] = performance.create_resource()
-        mapper.connect("storages", "/storages/{id}/metrics-config",
-                       controller=self.resources['performance'],
-                       action="metrics_config",
-                       conditions={"method": ["PUT"]})
 
         self.resources['access_info'] = access_info.create_resource()
         mapper.connect("storages", "/storages/{id}/access-info",
