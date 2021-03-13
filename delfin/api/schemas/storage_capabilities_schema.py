@@ -1,4 +1,4 @@
-# Copyright 2020 The SODA Authors.
+# Copyright 2021 The SODA Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DRIVER_SPECIFICATION_SCHEMA = {
+STORAGE_CAPABILITIES_SCHEMA = {
     'type': 'object',
     'properties': {
         'is_historic': {'type': 'boolean'},

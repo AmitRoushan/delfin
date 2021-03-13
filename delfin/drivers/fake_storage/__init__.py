@@ -462,7 +462,7 @@ class FakeStorageDriver(driver.StorageDriver):
 
     @staticmethod
     def get_capabilities(context):
-        """List resource metrics supported by driver"""
+        """Get capability of supported driver"""
         return {
             'is_historic': False,
             'resource_metrics': {

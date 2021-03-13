@@ -152,6 +152,6 @@ class API(object):
                                             interval, is_historic)
 
     def get_capabilities(self, context, storage_id,):
-        """Get driver's cababilities"""
+        """Get capabilities from supported driver"""
         driver = self.driver_manager.get_driver(context, storage_id=storage_id)
         return driver.get_capabilities(context)

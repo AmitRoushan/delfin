@@ -17,8 +17,6 @@ import sys
 from unittest import TestCase, mock
 from delfin.common import config # noqa
 from delfin.drivers.manager import DriverManager
-# from delfin.drivers.fake_storage import FakeStorageDriver
-# from delfin import exception
 
 sys.modules['delfin.cryptor'] = mock.Mock()
 

@@ -311,6 +311,16 @@ class InvalidIpOrPort(DelfinException):
     code = 400
 
 
-class StorageDriverAlert(DelfinException):
-    msg_fmt = _("Storage driver alert '{0}'")
-    code = 400
+class InvalidStorageCapability(Invalid):
+    msg_fmt = _("Invalid capability response: {0}")
+    code = 500
+
+
+class StorageCapabilityNotSupported(Invalid):
+    msg_fmt = _("Capability feature not supported by storage")
+    code = 501
+
+
+class EmptyResourceMetrics(DelfinException):
+    msg_fmt = _("Empty resource metric in capabilities")
+    code = 501

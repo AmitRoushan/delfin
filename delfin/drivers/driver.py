@@ -133,5 +133,5 @@ class StorageDriver(object):
 
     @staticmethod
     def get_capabilities(context):
-        """Get driver's capabilities"""
+        """Get capability of driver"""
         pass
